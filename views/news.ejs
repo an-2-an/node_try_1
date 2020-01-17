@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>News</title>
+	<style type="text/css">
+		body {
+			background-color: blue;
+			color: white;
+		}
+	</style>
+	<link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+	<%- include('blocks/header') %>
+	<h1>News number <%= newsId %></h1>
+
+	<p>Title: <strong><%= obj.title %></strong></p>
+	<ul>
+	<% obj.paragraphs.forEach(function(paragraph){ %>
+	<li><%= paragraph %></li>
+	<% }); %>	
+	</ul>
+</body>
+</html>
